@@ -16,9 +16,9 @@ def run_pipeline(symbol: str, interval: str, limit: int, db_url: str = DB_URL) -
     df = transform(raw, symbol, interval)
 
     print(f"[load]     Writing {len(df)} rows to {db_url} (table: {TABLE_NAME}) ...")
-    n = load(df, db_url)
+    #n = load(df, db_url)
 
-    print(f"Done. {n} rows loaded.")
+    #print(f"Done. {n} rows loaded.")
     print(df[["symbol", "interval", "open_time", "close", "volume", "pct_change"]].tail())
 
 
